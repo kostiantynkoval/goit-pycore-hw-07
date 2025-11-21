@@ -202,6 +202,7 @@ def show_all(book):
         return "No contacts found."
 
 
+'''add-birthday: Додати День Народження до контакту.'''
 @input_error
 def add_birthday(args, book:AddressBook):
     name, birthday = args
@@ -212,6 +213,7 @@ def add_birthday(args, book:AddressBook):
     return ("Contact not found.")
 
 
+'''show-birthday: Показати День Народження для вказаного контакту.'''
 @input_error
 def show_birthday(args, book:AddressBook):
     [name] = args
@@ -221,6 +223,7 @@ def show_birthday(args, book:AddressBook):
     return ("Contact not found.")
 
 
+'''birthdays: Показати усі Дні Народження та Імена контактів для Днів Народжень, що будуть протягом найближчих 7 днів.'''
 @input_error
 def birthdays(book:AddressBook):
     return book.get_upcoming_birthdays()
